@@ -53,6 +53,7 @@ async def add_item(name: str = Form(...), category: str = Form(...), image: Opti
         hash_name = hashlib.sha256(contents).hexdigest()
         image_name = f"{hash_name}.jpg"
         image_path = os.path.join(images_dir, image_name)
+        return {"image_path": image_path}
         # 画像をファイルに保存
         with open(image_path, "wb") as file:
             file.write(contents)
