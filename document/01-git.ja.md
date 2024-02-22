@@ -92,10 +92,20 @@ $ git config --local core.hooksPath .githooks/
 
   **<NOTE開始>**
   
-second-pull-requestというブランチをリモートからローカルに反映するとき
+second-pull-requestというリモートのブランチをローカルに反映するとき
+反映したいブランチに移動して
 ```
  git fetch origin second-pull-request
  git merge origin/second-pull-request
+```
+
+コミット後までmain.pyの保存した変更を取り消す
+```
+git restore main.py
+```
+ブランチを削除
+```
+git branch -d second-pull-request
 ```
 **<NOTE終了>**
 
