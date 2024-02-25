@@ -98,6 +98,7 @@ second-pull-requestというリモートのブランチをローカルに反映�
  git fetch origin second-pull-request
  git merge origin/second-pull-request
 ```
+![スクリーンショット 2024-02-26 1 50 40（2）](https://github.com/kswbr-tomoka/mercari-build-training/assets/119879279/27b913a1-67e0-458b-a73d-454019a3623c)
 
 コミット後までmain.pyの保存した変更を取り消す
 ```
@@ -109,6 +110,18 @@ git branch -d second-pull-request
 ```
 **<NOTE終了>**
 
+**<NOTE開始>**
+
+**リポジトリに入れないようにする**
+リポジトリのルートディレクトリで次のコマンドを使用して新しく作成
+```
+touch .gitignore
+```
+
+.gitignoreをテキストエディタで開き、管理対象外にしたいファイル名を書き込む。これで終了。
+
+git rm --cached はすでにコミットしているファイルに使う
+**<NOTE終了>**
 ---
 ### Next
 
